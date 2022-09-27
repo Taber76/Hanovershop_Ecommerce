@@ -1,5 +1,9 @@
+import './NavBar.css'
+import { Link } from 'react-router-dom'
+
 import CartWidget from './CartWidget'
 import logo from './logo.png'
+
 
 const NavBar = () => {
   return (
@@ -12,19 +16,16 @@ const NavBar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mx-auto mb-2 mb-lg-0">
-              <li className="nav-item px-3">
+              <li className="nav-item px-3 fs-5">
                 <a className="nav-link" href="#">Mujer</a>
               </li>
-              <li className="nav-item px-3">
+              <li className="nav-item px-3 fs-5">
                 <a className="nav-link" href="#">Hombre</a>
               </li>
-              <li className="nav-item px-3">
+              <li className="nav-item px-3 fs-5">
                 <a className="nav-link" href="#">Niños</a>
               </li>
-              <li className="nav-item px-3">
-                <a className="nav-link" href="#">Accesorios</a>
-              </li>
-              <li className="nav-item px-3">
+              <li className="nav-item px-3 fs-5">
                 <a className="nav-link" href="#">Oferta semanal</a>
               </li>
             </ul>

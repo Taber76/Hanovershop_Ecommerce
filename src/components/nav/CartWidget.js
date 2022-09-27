@@ -1,9 +1,10 @@
-import imagen from './bag.png'
+import './CartWidget.css'
+import { Bag } from 'react-bootstrap-icons'
 
 const CartWidget = () => {
   return (
     <div>
-      <img src={imagen} alt="bolsa" width={50}/>     
+      <Bag className="bolsaCompras"/>   
     </div>
   )
 }

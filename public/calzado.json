@@ -1,0 +1,99 @@
+[{
+  "id": 1,
+  "genero": "M",
+  "stock": [
+    {
+      "talle": 39,
+      "stock": 10
+    },
+    {
+      "talle": 40,
+      "stock": 10
+    },
+    {
+      "talle": 41,
+      "stock": 10
+    },
+    {
+      "talle": 42,
+      "stock": 10
+    },
+    {
+      "talle": 43,
+      "stock": 10
+    } ],
+  "colores": [
+    "https://drive.google.com/uc?export=view&id=1sCJtLbQsqiOeOjD5z6Le17RQ-LsQEXek&rl",
+    "https://drive.google.com/uc?export=view&id=1XRnNQs9wDM2lP7Vh6fqxx2DTJ4kBJyDw"
+  ],
+  "marca": "American Sport",
+  "modelo": "Deportivo American Sport Williams",
+  "precio": "1690"
+},
+  
+{
+  "id": 2,
+  "genero": "M",
+  "stock": [
+    {
+      "talle": 39,
+      "stock": 10
+    },
+    {
+      "talle": 40,
+      "stock": 10
+    },
+    {
+      "talle": 41,
+      "stock": 10
+    },
+    {
+      "talle": 42,
+      "stock": 10
+    },
+    {
+      "talle": 43,
+      "stock": 10
+    }
+  ],
+  "colores": [
+   "https://drive.google.com/uc?export=view&id=1apFFlrZC-OXgH2jvAfAC5iXpp3UFzQ4x"
+  ],
+  "marca": "American Sport",
+  "modelo": "Deportivo Tommet Black Men",
+  "precio": "2490"
+},
+  
+{
+  "id": 3,
+  "genero": "M",
+  "stock": [
+    {
+      "talle": 39,
+      "stock": 10
+    },
+    {
+      "talle": 40,
+      "stock": 10
+    },
+    {
+      "talle": 41,
+      "stock": 10
+    },
+    {
+      "talle": 42,
+      "stock": 10
+    },
+    {
+      "talle": 43,
+      "stock": 10
+    }
+  ],
+  "colores": [
+    "https://drive.google.com/uc?export=view&id=1s2-20KVhAiqyZQkyHgB6AGRtf1Agj-J_",
+    "https://drive.google.com/uc?export=view&id=1-iAVlCJuR1AuBRBfpoA9XclKWEgCk9Sd"
+  ],
+  "marca": "Zoo York",
+  "modelo": "Deportivo Zoo York South Bend",
+  "precio": "1990"
+}]
