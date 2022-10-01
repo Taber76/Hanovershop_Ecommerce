@@ -1,26 +1,31 @@
 [{
   "id": 1,
-  "genero": "M",
+  "genero": "hombre",
   "stock": [
     {
       "talle": 39,
-      "stock": 10
+      "stock": 10,
+      "stock2": 10
     },
     {
       "talle": 40,
-      "stock": 10
+      "stock": 10,
+      "stock2": 10
     },
     {
       "talle": 41,
-      "stock": 10
+      "stock": 10,
+      "stock2": 10
     },
     {
       "talle": 42,
-      "stock": 10
+      "stock": 10,
+      "stock2": 10
     },
     {
       "talle": 43,
-      "stock": 10
+      "stock": 10,
+      "stock2": 10
     } ],
   "colores": [
     "https://drive.google.com/uc?export=view&id=1sCJtLbQsqiOeOjD5z6Le17RQ-LsQEXek&rl",
@@ -33,27 +38,32 @@
   
 {
   "id": 2,
-  "genero": "M",
+  "genero": "hombre",
   "stock": [
     {
       "talle": 39,
-      "stock": 10
+      "stock": 10,
+      "stock2": 0
     },
     {
       "talle": 40,
-      "stock": 10
+      "stock": 10,
+      "stock2": 0
     },
     {
       "talle": 41,
-      "stock": 10
+      "stock": 10,
+      "stock2": 0
     },
     {
       "talle": 42,
-      "stock": 10
+      "stock": 10,
+      "stock2": 0
     },
     {
       "talle": 43,
-      "stock": 10
+      "stock": 10,
+      "stock2": 0
     }
   ],
   "colores": [
@@ -66,27 +76,32 @@
   
 {
   "id": 3,
-  "genero": "M",
+  "genero": "hombre",
   "stock": [
     {
       "talle": 39,
-      "stock": 10
+      "stock": 10,
+      "stock2": 10
     },
     {
       "talle": 40,
-      "stock": 10
+      "stock": 10,
+      "stock2": 10
     },
     {
       "talle": 41,
-      "stock": 10
+      "stock": 10,
+      "stock2": 10
     },
     {
       "talle": 42,
-      "stock": 10
+      "stock": 10,
+      "stock2": 10
     },
     {
       "talle": 43,
-      "stock": 10
+      "stock": 10,
+      "stock2": 10
     }
   ],
   "colores": [
@@ -96,4 +111,237 @@
   "marca": "Zoo York",
   "modelo": "Deportivo Zoo York South Bend",
   "precio": "1990"
+},
+  
+{
+  "id": 4,
+  "genero": "mujer",
+  "stock": [
+    {
+      "talle": 35,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 36,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 37,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 38,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 39,
+      "stock": 10,
+      "stock2": 10
+    }
+  ],
+  "colores": [
+    "https://drive.google.com/uc?export=view&id=1WePnhDiOfAz5OWjkKtdAb5D6ka5L4mAT",
+    "https://drive.google.com/uc?export=view&id=1AJ2jedQsfPrZzEY-jF7aRMPkTM2faMKq"
+  ],
+  "marca": "American Sport",
+  "modelo": "Deportivo Airtech reels",
+  "precio": "1690"
+},
+  
+{
+  "id": 5,
+  "genero": "mujer",
+  "stock": [
+    {
+      "talle": 35,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 36,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 37,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 38,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 39,
+      "stock": 10,
+      "stock2": 10
+    }
+  ],
+  "colores": [
+    "https://drive.google.com/uc?export=view&id=1K8RKjqTTcNJj2HnfAer0wnsIwGhWCzYC",
+    "https://drive.google.com/uc?export=view&id=1ndZ4aJBgbYViuNGAI7UEh6KeddajxsLz"
+  ],
+  "marca": "American Sport",
+  "modelo": "Tela alto",
+  "precio": "1790"
+},
+  
+{
+  "id": 6,
+  "genero": "mujer",
+  "stock": [
+    {
+      "talle": 35,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 36,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 37,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 38,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 39,
+      "stock": 10,
+      "stock2": 10
+    }
+  ],
+  "colores": [
+    "https://drive.google.com/uc?export=view&id=17pPB4Nnyqi52TozcDTCcILSSrRB4xogw",
+    "https://drive.google.com/uc?export=view&id=19ySBZknk6JYZuaVRD8qH6G7jULc1ELWk"
+  ],
+  "marca": "American Sport",
+  "modelo": "Deportivo Rocket",
+  "precio": "1390"
+},
+  
+{
+  "id": 7,
+  "genero": "nino",
+  "stock": [
+    {
+      "talle": 28,
+      "stock": 10,
+      "stock2": 0
+    },
+    {
+      "talle": 29,
+      "stock": 10,
+      "stock2": 0
+    },
+    {
+      "talle": 30,
+      "stock": 10,
+      "stock2": 0
+    },
+    {
+      "talle": 31,
+      "stock": 10,
+      "stock2": 0
+    },
+    {
+      "talle": 32,
+      "stock": 10,
+      "stock2": 0
+    }
+  ],
+  "colores": [
+    "https://drive.google.com/uc?export=view&id=1KPwiFLhIrlsR6ZB4PhZuwGDECTsIlTql"
+  ],
+  "marca": "Guga",
+  "modelo": "Sandalia Kids",
+  "precio": "490"
+},
+  
+{
+  "id": 8,
+  "genero": "nino",
+  "stock": [
+    {
+      "talle": 28,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 29,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 30,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 31,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 32,
+      "stock": 10,
+      "stock2": 10
+    }
+  ],
+  "colores": [
+    "https://drive.google.com/uc?export=view&id=1ixAPP8s2iTTa4r4BK2cLgvP2QxHqQxks",
+    "https://drive.google.com/uc?export=view&id=1vVuzNZnq5DEkucI9GlJvLX-5bSuVFbCY"
+  ],
+  "marca": "Guga",
+  "modelo": "Bota Ornella",
+  "precio": "1290"
+},
+  
+{
+  "id": 9,
+  "genero": "nino",
+  "stock": [
+    {
+      "talle": 19,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 20,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 21,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 22,
+      "stock": 10,
+      "stock2": 10
+    },
+    {
+      "talle": 23,
+      "stock": 10,
+      "stock2": 10
+    }
+  ],
+  "colores": [
+    "https://drive.google.com/uc?export=view&id=1QPYVpFPvNSXp8jf1g1Ttm3ssWJ-zZfw8",
+    "https://drive.google.com/uc?export=view&id=12EwlNmQ6ak3t1se7GdX6zjhA8TC610BK"
+  ],
+  "marca": "Guga",
+  "modelo": "Benny lines",
+  "precio": "690"
 }]

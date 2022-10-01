@@ -1,13 +1,14 @@
-import { useState, useEffect } from 'react'
-import Item from './Item'
-import { Link } from 'react-router-dom'
+import { useEffect, useState  } from 'react'
+import { useParams, Link } from 'react-router-dom'
 
-const ItemList = () => {
+import Item from '../pages/Item'
 
+const Calzado = () => {
+  const { tipoCalzado } = useParams()
   const[calzado, setCalzado] = useState([])
-  
+ 
   useEffect(() => {
-    fetch("./calzado.json") 
+    fetch("../calzado.json") 
     .then((response) => response.json())
     .then((data) => {
       setTimeout(() =>  {   // simulo retardo de 2s en respuesta
@@ -16,17 +17,17 @@ const ItemList = () => {
     })
   }, [])
 
-  
+
   return (
     <div className='container'>
       <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3'>
       {calzado.length == 0 ? 
         <div className='col mx-auto badge bg-secondary'>CARGANDO...</div>
-        : calzado.map((ele) => (
+        : calzado.filter( ele => ele.genero == tipoCalzado ).map( elefil => (
         <div className='col'>
-          <Link className="" to={`/calzado/${ele.genero}/${ele.id}`}>
-            <Item ele={ele} key={ele.id}/>
-          </Link>        
+          <Link className="" to={`/calzado/${tipoCalzado}/${elefil.id}`}>
+            <Item ele={elefil} key={elefil.id}/>
+          </Link>
         </div>     
       ))}
       </div>
@@ -34,4 +35,4 @@ const ItemList = () => {
   )
 }
 
-export default ItemList
+export default Calzado
