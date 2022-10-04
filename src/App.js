@@ -1,17 +1,17 @@
 import './App.css'
 
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 
 import NavBar from './components/nav/NavBar'
 import Home from './components/routes/Home'
 import Calzado from './components/routes/Calzado'
-import Item from './components/pages/Item'
 import ItemDetail from './components/pages/ItemDetail'
+import Footer from './components/footer/Footer'
 
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <NavBar/>
       <Routes>
         <Route exact path='/' element={<Home />} /> 
@@ -19,7 +19,8 @@ function App() {
         <Route exact path='/calzado/:tipoCalzado' element={<Calzado />} />
         <Route exact path='/calzado/:tipoCalzado/:modelo' element={<ItemDetail />} />
       </Routes>
-    </Router>    
+      <Footer/>
+    </BrowserRouter>    
   )
 }
 

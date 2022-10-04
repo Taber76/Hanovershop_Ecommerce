@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 
 import React from 'react'
-import ItemCount from "./ItemCount"
+import ItemCount from "./ItemDetail/ItemCount"
+import ItemFotoPrincipal from "./ItemDetail/ItemFotoPrincipal"
 import { useParams } from "react-router-dom"
 
 
@@ -9,10 +10,15 @@ const ItemDetail = () => {
   const { tipoCalzado, modelo } = useParams()
 
   const [stock, setStock] = useState(10)
-  const [ele, setEle] = useState(0)
+  const [ele, setEle] = useState(0) //Modelo seleccionado
+  const [colorsel, setColorsel] = useState() //Color seleccionado
 
   const modificoStock = (stockInicial, cantidad) => {
     setStock(stockInicial - cantidad)
+  }
+
+  const colorHandle = (color) => {
+    setColorsel(color)
   }
   
   useEffect(() => {
@@ -21,6 +27,7 @@ const ItemDetail = () => {
     .then((data) => {
       setTimeout(() =>  {   // simulo retardo de 1s en respuesta
         setEle(data.filter( elem => elem.id == modelo)[0])
+        setColorsel(ele.colores[0])
       } ,1000)
     })
   }, [])
@@ -31,9 +38,7 @@ const ItemDetail = () => {
     {ele == 0 ?
       <div className='col mx-auto badge bg-secondary'>CARGANDO...</div>:
       <div className='row row-cols-1 row-cols-xl-2'> 
-        <div className='col fotoPrincipal'>
-          <img className="img-fluid" src={ele.colores[0]} alt='foto principal del zapato'/>
-        </div>
+        <ItemFotoPrincipal enlace={ele.colores[0]} />
         <div className='col detalles'>
           <div className='row fs-1 text-uppercase fw-bold'>{ele.marca}</div>
           <div className='row text-uppercase fw-bold'>{ele.modelo}</div>
