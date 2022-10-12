@@ -1,7 +1,8 @@
 import { useEffect, useState  } from 'react'
 import { useParams, Link } from 'react-router-dom'
 
-import Item from '../pages/Item'
+import Item from '../pages/list/Item'
+import LoadingSpiner from '../loadingspiner/LoadingSpiner'
 
 const Calzado = () => {
   const { tipoCalzado } = useParams()
@@ -22,7 +23,7 @@ const Calzado = () => {
     <div className='container'>
       <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3'>
       {calzado.length == 0 ? 
-        <div className='col mx-auto badge bg-secondary'>CARGANDO...</div>
+        <LoadingSpiner/>
         : calzado.filter( ele => ele.genero == tipoCalzado ).map( elefil => (
         <div className='col'>
           <Link className="" to={`/calzado/${tipoCalzado}/${elefil.id}`}>

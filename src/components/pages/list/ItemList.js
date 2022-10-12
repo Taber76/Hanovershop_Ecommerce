@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
-import Item from './Item'
 import { Link } from 'react-router-dom'
+
+import Item from './Item'
+import LoadingSpiner from '../../loadingspiner/LoadingSpiner'
 
 const ItemList = () => {
 
@@ -21,7 +23,7 @@ const ItemList = () => {
     <div className='container'>
       <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3'>
       {calzado.length == 0 ? 
-        <div className='col mx-auto badge bg-secondary'>CARGANDO...</div>
+        <LoadingSpiner/>
         : calzado.map((ele) => (
         <div className='col'>
           <Link className="" to={`/calzado/${ele.genero}/${ele.id}`}>

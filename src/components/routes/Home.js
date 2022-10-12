@@ -1,11 +1,10 @@
 
-import ItemListContainer from '../pages/ItemListContainer'
+import ItemListContainer from "../pages/list/ItemListContainer"
 
 function Home() {
   return (
     <div className=''>
-      <p>OFERTA</p>
-      <ItemListContainer greeting="HANOVER SHOE SHOP"/>
+      <ItemListContainer/>
     </div>
   )
 }
