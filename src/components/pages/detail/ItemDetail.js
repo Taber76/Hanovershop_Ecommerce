@@ -11,16 +11,16 @@ import { CartContext } from '../../contexts/CartContext'
 
 const ItemDetail = ({ id }) => {
 
-  const { carrito, addItem } = useContext(CartContext)
+  const { addItem } = useContext(CartContext)
 
   const [stock, setStock] = useState(10)
   const [item, setItem] = useState(0) // modelo seleccionado
   const [color, setColor] = useState(0)
   const [talle, setTalle] = useState()
 
-  const modificoStock = (stockInicial, cantidad) => {
-    setStock(stockInicial - cantidad)
+  const modificoStock = (stockInicial, cantidad) => {  
     addItem([item.id, color, cantidad]) // contexto
+    setStock(stockInicial - cantidad)
   }
    
   const colorHandle = (ev) => {
