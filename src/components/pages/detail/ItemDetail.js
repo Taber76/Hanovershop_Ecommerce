@@ -1,22 +1,20 @@
 import './ItemDetail.css'
 
-import { useState, useEffect, useContext } from "react"
+import { useState, useContext } from "react"
 import { Link } from 'react-router-dom'
 
 import ItemCount from "./ItemCount"
-import LoadingSpiner from '../../loadingspiner/LoadingSpiner'
 
 import { CartContext } from '../../contexts/CartContext'
 
 
-const ItemDetail = ({ id }) => {
+const ItemDetail = ({ item }) => {
 
   const { addItem } = useContext(CartContext)
 
   const [stock, setStock] = useState(10)
-  const [item, setItem] = useState(0) // modelo seleccionado
   const [color, setColor] = useState(0)
-  const [talle, setTalle] = useState()
+  //const [talle, setTalle] = useState()
 
   const modificoStock = (stockInicial, cantidad) => {  
     addItem([item.id, color, cantidad]) // contexto
@@ -27,21 +25,10 @@ const ItemDetail = ({ id }) => {
     setColor(parseInt(ev.target.id))
   }
   
-  useEffect(() => {
-    fetch("/calzado.json") 
-    .then((response) => response.json())
-    .then((data) => {
-      setTimeout(() =>  {   // simulo retardo de 1s en respuesta
-        setItem(data.filter( elem => elem.id == id)[0])
-      } ,1000)
-    })
-  }, [])
-
 
   return (
-    <div className='container border'>
-    { !item  ?
-      <LoadingSpiner/>:
+    <div className=''>
+    
       <div className='row row-cols-1 row-cols-xl-2'>       
         
         <div className='col'>
@@ -82,7 +69,7 @@ const ItemDetail = ({ id }) => {
           </div>
         </div>
       </div>
-    }
+    
     </div>
   )
 }
