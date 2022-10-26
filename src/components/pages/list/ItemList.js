@@ -1,6 +1,7 @@
+import Item from './Item'
+
 import { Link } from 'react-router-dom'
 
-import Item from './Item'
 
 const ItemList = ({item}) => {
 

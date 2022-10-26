@@ -1,23 +1,16 @@
 import './ItemCount.css'
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
 
-const ItemCount = ({ stock, onAdd }) => {
+import { useState } from 'react'
+
+
+const ItemCount = ({ onAdd }) => {
 
   const [cantidad, setCantidad] = useState(0)
 
-  const handleMas = () => {
-    cantidad < stock && setCantidad( cantidad + 1 )
-  }
-
-  const handleMenos = () => {
-    cantidad > 0 && setCantidad( cantidad - 1 ) 
-  }
-
-  const handleCarrito = () => {
-    stock >= cantidad && onAdd ( stock, cantidad )
-  }
-  
+  const handleMas = () => setCantidad( cantidad + 1 )
+  const handleMenos = () => cantidad > 0 && setCantidad( cantidad - 1 ) 
+  const handleCarrito = () => onAdd ( cantidad )
+    
 
   return (
       <div>  

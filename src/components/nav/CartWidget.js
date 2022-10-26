@@ -13,8 +13,10 @@ const CartWidget = () => {
       <div className="">
         <Bag className="bag"/>
       </div>
-      { cartItems == 0 ?
-        <div></div> :
+      { cartItems == 0
+       ?
+        <div></div>
+       :
         <div className="number">
           {cartItems}
         </div>}

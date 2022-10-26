@@ -1,36 +1,36 @@
-import React from 'react'
 import ItemDetail from './ItemDetail'
+import LoadingSpiner from '../../loadingspiner/LoadingSpiner'
 
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from "react"
 import { getFirestore, collection, getDocs } from 'firebase/firestore'
-import LoadingSpiner from '../../loadingspiner/LoadingSpiner'
 
 
 function ItemDetailContainer() {
-  const { tipoCalzado, modelo } = useParams()
-
-  const [item, setItem] = useState(0) // modelo seleccionado
+ 
+  const { modelo } = useParams() // modelo es el id de producto
+  const [item, setItem] = useState()
 
   useEffect(() => {
     const db = getFirestore()
     const itemsCollection = collection(db, 'calzadoList')
-    getDocs(itemsCollection).then((snapshot) => {
-      const arrproducts = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setItem(arrproducts.filter(elem => elem.id == modelo)[0])
+    getDocs(itemsCollection).then((res) => {
+      const arrproducts = res.docs.map((doc) => (doc.data()))
+      setItem(arrproducts.filter(elem => elem.id.toString() === modelo)[0])
     })
-
-  }, [])
-
+  }, [modelo])
 
 
   return (
     <div className='container border'>
-    { !item ?
-      <LoadingSpiner/>:
+    { modelo > 9
+      ?
+    (<div className='badge bg-primary'>No existe item seleccionado</div>)
+      :
+      !item 
+        ?
+      <LoadingSpiner/>
+        :
       <ItemDetail item = {item} />
     }  
     </div>
