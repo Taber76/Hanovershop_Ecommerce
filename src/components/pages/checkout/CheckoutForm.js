@@ -1,5 +1,5 @@
 import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase/firestore'
-import { useState, useContext, useEffect } from "react"
+import { useState, useContext } from "react"
 
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -29,7 +29,7 @@ function CheckoutForm() {
   const submitHandler = (ev) => {
     ev.preventDefault()
 
-    if ( form.name && form.email && form.email == form.email2 ) {
+    if ( form.name && form.email && form.email === form.email2 ) {
 
       // Guardo orden de compra en FIRESTONE
       const db = getFirestore()
@@ -43,7 +43,7 @@ function CheckoutForm() {
     } else {
       !form.name && toast.error('No ha ingresado un nombre', toastConfig)
       !form.email && toast.error('Debe ingresar un email', toastConfig)
-      form.email != form.email2 && toast.error('Los email deben coincidir', toastConfig)
+      form.email !== form.email2 && toast.error('Los email deben coincidir', toastConfig)
     }
 
   }

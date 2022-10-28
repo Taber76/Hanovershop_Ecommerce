@@ -29,17 +29,16 @@ const ItemListContainer = () => {
     }
 
   }, [tipoCalzado])
-  
- 
+
   return (
     <div className="container">
       <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3'>
       {calzado.length === 0 
       ?
         <LoadingSpiner/>
-      : calzado.map((ele) => (       
+      : calzado.map((ele, index) => (       
             <div className='col'>
-              <ItemList item={ ele } key={ ele.id } />
+              <ItemList item={ ele } key={ index } />
            </div> 
         ))}
       </div>   

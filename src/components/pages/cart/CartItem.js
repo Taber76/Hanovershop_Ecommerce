@@ -12,7 +12,7 @@ function CartItem({ item }) {
 
   return (
     <div className='row aling-items-center'>
-      <img className="px-0 col-2 miniFoto" src={item.foto}/>
+      <img className="px-0 col-2 miniFoto" src={item.foto} alt="foto del articulo"/>
       <div className='px-0 col-5'>{item.modelo} - {item.marca} - talle: {item.talle}</div>
       <div className='px-0 text-center col-1'>$ {item.precio}</div>
       <div className='px-0 text-center col-1'>{item.cantidad}</div>

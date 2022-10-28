@@ -9,11 +9,11 @@ import { useState, useContext, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { getFirestore, doc, setDoc } from 'firebase/firestore'
 
+
 const ItemDetail = ({ item }) => {
 
   const { addItem } = useContext(CartContext)
   const [ color, setColor ] = useState(0) // 0 o 1
-  const [ talleStock, setTalleStock ] = useState(0) // stock del talle y color seleccionado
   const [ talleSelected, setTalleSelected ] = useState() // talle 0 a 5
   const [ stock, setStock ] = useState([]) // vector con stock del color elegido
 
@@ -30,20 +30,20 @@ const ItemDetail = ({ item }) => {
 
   useEffect(() => {
     setStock(item.stock.map((ele) => 
-      color == 0 ? ele.stock : ele.stock2
+      color === 0 ? ele.stock : ele.stock2
     ))
-  }, [color])
+  }, [color, item.stock])
   
   
   const itemStock = (item, cantidad, talleSelected) => { // reviso si hay stock y actualizo stock FIRESOTRE
     let resp = false
     let stockSel
-    color == 0 ? stockSel = item.stock[talleSelected].stock
+    color === 0 ? stockSel = item.stock[talleSelected].stock
                   : stockSel = item.stock[talleSelected].stock2
 
     if ( cantidad <= stockSel) {
       resp = true    
-      color == 0 ? item.stock[talleSelected].stock -= cantidad
+      color === 0 ? item.stock[talleSelected].stock -= cantidad
                   : item.stock[talleSelected].stock2 -= cantidad      
       
       // Actualizo stock en Firesotre
@@ -68,8 +68,11 @@ const ItemDetail = ({ item }) => {
                     "talle": item.stock[talleSelected].talle,
                     "talleId": talleSelected,
                     "cantidad": cantidad})
+            cantidad > 1 ?  toast.info(`Se agregaron ${cantidad} artículos al carrito`, toastConfig)
+              : toast.info(`Se agregó un artículo al carrito`, toastConfig)
+            
           } else {
-            toast.error('No hay suficiente stock del articulo seleccionado', toastConfig)
+            toast.error('No hay suficiente stock del artículo seleccionado', toastConfig)
           }
       } else {
         toast.error('Debe seleccionar talle e indicar cantidad', toastConfig)
@@ -83,7 +86,6 @@ const ItemDetail = ({ item }) => {
   }
   
   const talleHandle = (ev) => { // seleccion talle zapato
-    setTalleStock(stock[parseInt(ev.target.id)])
     setTalleSelected(parseInt(ev.target.id))
   }
   
@@ -113,10 +115,10 @@ const ItemDetail = ({ item }) => {
           
           <div className='row mx-auto'>
             {item.stock.map((stk, index) => (
-              <div id={index} className={`btn ${index == talleSelected ?
+              <div id={index} className={`btn ${index === talleSelected ?
                                                          "btn-success" :
                                                          "btn-primary"} 
-                    badge text-center m-2 col-1 ${stock[index] == 0 ?
+                    badge text-center m-2 col-1 ${stock[index] === 0 ?
                                                  "disabled" :
                                                  ""}`}
                     key={index} onClick={talleHandle}>
@@ -132,9 +134,6 @@ const ItemDetail = ({ item }) => {
             <Link className="row justify-content-center py-1" to={`/cart`}>
               <button className='badge col-7 fs-6 bg-success mx-auto btnPagar'>Pagar</button>
             </Link>
-            <div className='row justify-content-center'>
-              <p className='col-7 badge bg-success text-end'>Stock: {talleStock}</p>
-            </div>
           </div>
         </div>
       </div>

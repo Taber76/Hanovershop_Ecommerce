@@ -12,6 +12,7 @@ const ItemCount = ({ onAdd }) => {
   const handleCarrito = () => onAdd ( cantidad )
     
 
+  
   return (
       <div>  
         <div className='row justify-content-center'>     

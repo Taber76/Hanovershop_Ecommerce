@@ -27,11 +27,10 @@ function ItemDetailContainer() {
       ?
     (<div className='badge bg-primary'>No existe item seleccionado</div>)
       :
-      !item 
-        ?
-      <LoadingSpiner/>
-        :
-      <ItemDetail item = {item} />
+      !item ?
+        <LoadingSpiner/>
+      :
+        <ItemDetail item = {item} key = {item.id} />
     }  
     </div>
 
