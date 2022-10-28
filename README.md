@@ -1,3 +1,17 @@
+# Ecommerce de calzado | Curso React | Coderhouse
+
+Para este desafío creé tres categorías de calzado (niño, mujer y hombre), a su vez cada modelo de calzado tiene 1 o 2 colores a elección y 5 talles distintos.
+
+El usuario navega entre las categorías y al presionar sobre un modelo en particular entra en el detalle del ítem, donde puede elegir entre las opciones de color (si está disponible para ese modelo), elegir el talle (los talles para los cuales no hay stock de ese modelo y color permanecen desactivados) y agregar al carrito siempre y cuando haya stock disponible (de lo contrario aparece un mensaje indicando que no es posible agregar al carrito). Cuando un ítem es agregado al carrito, se baja del stock de la base de datos de Firestore para mantener el producto “reservado”.
+
+Una vez que el usuario haya agregado los ítems que desee puede navegar al carrito, donde se muestran los ítems seleccionados y el costo total de la compra, allí tiene las opciones de borrar un ítem, vaciar el carrito, seguir comprando o proceder al pago.
+
+Cuando se procede al pago, se le pide al usuario que ingrese nombre y correo. Una vez finalizada la compra le aparece el código de su orden de compra y se borra el carrito. Su orden de compra se almacena en otra base de datos de Firestore, donde se guarda el detalle de la compra, los datos de usuario y la hora y fecha de la compra.
+
+
+---
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
